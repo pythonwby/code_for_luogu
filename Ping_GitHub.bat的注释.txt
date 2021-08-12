@@ -1,3 +1,5 @@
 github.com是原网址
 13.229.188.59是ip地址，加到hosts文件里可以加快速度
 "C:\Windows\System32\drivers\etc\hosts"
+hosts修改好后cmd执行dns刷新：
+ipconfig /flushdns
