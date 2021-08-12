@@ -66,6 +66,7 @@ int main(){
     for(short i=n-1;i>=0;i--){
         printf("%hd",c[i]);
     }
+    printf("\n");
     system("pause");
     return 0;
 }
