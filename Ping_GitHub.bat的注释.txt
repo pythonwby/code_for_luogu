@@ -1,6 +1,7 @@
 github.com是原网址
 把ping输出的ip加到下面文件里
 "C:\Windows\System32\drivers\etc\hosts"
+如果ping给出的ip加到hosts中后仍很慢，可以在 https://tool.chinaz.com/dns/?type=1&host=github.com&ip= 找ttl值最小的ip加入hosts
 
 格式：(查询到的ip) github.com
 
@@ -8,3 +9,4 @@ github.com是原网址
 
 hosts修改好后cmd执行dns刷新命令：
 ipconfig /flushdns
+如果html文件有问题，可以去 https://www.freesion.com/article/65861008617/
