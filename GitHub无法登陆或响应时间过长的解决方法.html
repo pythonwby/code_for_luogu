@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>GitHub无法登陆或响应时间过长的解决方法（转载）</title>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+  <meta name="description" content="大家好，我是梅巴哥er。本篇转载自：https://blog.csdn.net/u013517229/article/details/81351885今天刚好遇到这个问题，此方法亲测有效，所以就顺便转载下来做记录。1，CDN，ContentDistributeNetwork，可以直译成内容分发网络，CDN解决的是如何将数据快速可靠从源站传递到用户的问">
+  <meta name="keywords" content="GitHub无法登陆或响应时间过长的解决方法（转载）">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="https://www.icode9.com/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://www.icode9.com/favicon.ico">
+  <link href="./GitHub无法登陆或响应时间过长的解决方法_files/style.css" rel="stylesheet" type="text/css">
+  <link href="./GitHub无法登陆或响应时间过长的解决方法_files/prettify.css" rel="stylesheet">
+   <link href="./GitHub无法登陆或响应时间过长的解决方法_files/prettify(1).css" rel="stylesheet" type="text/css">
+  <script src="./GitHub无法登陆或响应时间过长的解决方法_files/f(4).txt"></script><script src="./GitHub无法登陆或响应时间过长的解决方法_files/osd.js.下载"></script><script src="./GitHub无法登陆或响应时间过长的解决方法_files/f(5).txt"></script><script type="text/javascript" async="" src="./GitHub无法登陆或响应时间过长的解决方法_files/analytics.js.下载"></script><script src="./GitHub无法登陆或响应时间过长的解决方法_files/f(6).txt" id="google_shimpl"></script><script src="./GitHub无法登陆或响应时间过长的解决方法_files/hm.js.下载"></script><script src="./GitHub无法登陆或响应时间过长的解决方法_files/prettify.js.下载"></script>
+  <script src="./GitHub无法登陆或响应时间过长的解决方法_files/jquery.min.js.下载"></script>
+  <script>
+	$(window).load(function(){
+		 $("pre").addClass("prettyprint");
+		 prettyPrint();
+	})
+  </script>
+  <script>
+ $(window).scroll(function() {
+     var t = $(document).scrollTop();
+     if (t < 850) {
+         $(".sidebar1").removeClass('fiesd-top');
+     } else {
+         $(".sidebar1").addClass('fiesd-top');
+     }
+ });
+</script>
+<script data-ad-client="ca-pub-6297881353008806" async="" src="./GitHub无法登陆或响应时间过长的解决方法_files/f(7).txt" data-checked-head="true"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./GitHub无法登陆或响应时间过长的解决方法_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-176051022-1');
+</script>
+ <meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="preload" href="./GitHub无法登陆或响应时间过长的解决方法_files/f(8).txt" as="script"><script type="text/javascript" src="./GitHub无法登陆或响应时间过长的解决方法_files/f(8).txt"></script><link rel="preload" href="./GitHub无法登陆或响应时间过长的解决方法_files/f(8).txt" as="script"><script type="text/javascript" src="./GitHub无法登陆或响应时间过长的解决方法_files/f(8).txt"></script></head>
+ <body class="single it" aria-hidden="false">
+  <link rel="stylesheet" href="./GitHub无法登陆或响应时间过长的解决方法_files/top.css" type="text/css">
+  <div id="top5" class="category">
+ <div class="category_title">
+  <a href="https://www.icode9.com/">
+    <div>
+      <img src="./GitHub无法登陆或响应时间过长的解决方法_files/logo.png"></div>
+    <div>
+      <h1 class="categoryname">ICode9</h1></div>
+  </a>
+  <div class="sc" style="float:right!important;margin-top:0!important;">
+    <form action="https://www.icode9.com/" target="_blank">
+      <input id="bdcsMain" class="focus" size="24" name="q" accesskey="s" autosave="baidu" results="8" autocomplete="off">
+      <button type="submit" name="sa" onclick="window.open(&#39;http://zhannei.baidu.com/cse/search?s=13994943330572230277&amp;entry=1&amp;q=&#39;+document.getElementById(&#39;bdcsMain&#39;).value)">搜索</button></form>
+
+   <div class="extra_sc">精准搜索请尝试：
+      <a href="https://www.icode9.com/" target="_blank" class="js" title="精确搜索">精确搜索</a></div>
+  </div>
+</div>
+ <div class="category_nav">
+  <div class="item cu">
+    <a href="https://www.icode9.com/">首页</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/list-1-0.html">编程语言</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/list-2-0.html">数据库</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/list-3-0.html">系统相关</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/list-5-0.html">互联网</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/list-4-0.html">其他分享</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/tags-python-0.html">Python</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/tags-java-0.html">Java</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/tags-JavaScript-0.html">JavaScript</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/tags-android-0.html">android</a></div>
+  <div class="item">
+    <a href="https://www.icode9.com/tags-PHP-0.html">PHP</a></div>
+</div>
+  </div>  
+  <div id="tt50">
+   <div id="hl-toutiao"></div>
+  </div>
+  <div id="con" style="height: auto !important;">
+   <div id="wrapper" style="height: auto !important;">
+    <div class="content fl" style="height: auto !important;">
+     <div class="current_nav">
+<a href="https://www.icode9.com/">首页</a>&nbsp;&gt;&nbsp;<a href="https://www.icode9.com/list-4-0.html">其他分享</a>&gt; 文章详细
+     </div>
+<div class="post_title">  
+  </div>
+     <div class="post_title">
+      <h1>GitHub无法登陆或响应时间过长的解决方法（转载）</h1>
+      <span class="pt_info pre1"><span id="pubtime_baidu">2021-03-21 21:02:48&nbsp;&nbsp;</span><span id="source_baidu">阅读：409&nbsp;&nbsp;</span><span id="author_baidu">来源：<strong>
+互联网</strong></span> <span id="hitcount"></span> </span>
+     </div>
+<div class="post_title"> 
+<!-- title_button_2 -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-6297881353008806" data-ad-slot="3507405797" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_1_anchor" style="display: block; border: none; height: 280px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 728px; background-color: transparent; overflow: visible;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:728px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="280" frameborder="0" src="./GitHub无法登陆或响应时间过长的解决方法_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CL2WsYGCq_ICFVInYAodtLYPLw" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>    </div>
+     <div class="con-recom">
+      <div class="bx-recom3">
+      </div>
+     </div>
+     <div class="post_content" id="paragraph">
+<p><strong>标签：</strong><a href="https://www.icode9.com/tags-GitHub-0.html" target="_blank">GitHub</a>&nbsp;<a href="https://www.icode9.com/tags-%E8%BF%87%E9%95%BF-0.html" target="_blank">过长</a>&nbsp;<a href="https://www.icode9.com/tags-CDN-0.html" target="_blank">CDN</a>&nbsp;<a href="https://www.icode9.com/tags-github-0.html" target="_blank">github</a>&nbsp;<a href="https://www.icode9.com/tags-204.232-0.html" target="_blank">204.232</a>&nbsp;<a href="https://www.icode9.com/tags-net-0.html" target="_blank">net</a>&nbsp;<a href="https://www.icode9.com/tags-%E8%BD%AC%E8%BD%BD-0.html" target="_blank">转载</a>&nbsp;<a href="https://www.icode9.com/tags-com-0.html" target="_blank">com</a>&nbsp;<a href="https://www.icode9.com/tags-cdn-0.html" target="_blank">cdn</a>	</p><br>
+<script src="./GitHub无法登陆或响应时间过长的解决方法_files/e.js.下载"></script>
+
+
+
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+<path d="M5,0 0,2.5 5,5z" id="raphael-marker-block" stroke-linecap="round" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+</svg>
+<p>大家好，我是<code>梅巴哥er</code>。 本篇转载自： https://blog.csdn.net/u013517229/article/details/81351885 今天刚好遇到这个问题，此方法亲测有效，所以就顺便转载下来做记录。</p>
+<hr>
+<p>1，CDN，Content Distribute Network，可以直译成内容分发网络，CDN解决的是如何将数据快速可靠从源站传递到用户的问题。用户获取数据时，不需要直接从源站获取，通过CDN对于数据的分发，用户可以从一个较优的服务器获取数据，从而达到快速访问，并减少源站负载压力的目的。</p>
+<p>2，为什么访问速度慢、下载慢？</p>
+<p>答：github的CDN被某墙屏了，由于网络代理商的原因，所以访问下载很慢。ping github.com 时，速度只有300多ms。</p>
+<p>3，如何解决？</p>
+<p>答：绕过dns解析，在本地直接绑定host，该方法也可加速其他因为CDN被屏蔽导致访问慢的网站。</p>
+<p>hosts文件所在目录，C:\Windows\System32\drivers\etc</p>
+<p>修改windows里的hosts文件，添加如下内容</p>
+<pre class="prettyprint prettyprinted" style=""><code class="prism language-js"><span class="pun">#</span><span class="pln"> </span><span class="typ">Github</span><span class="pln">
+</span><span class="lit">151.101</span><span class="pun">.</span><span class="lit">44.249</span><span class="pln"> github</span><span class="pun">.</span><span class="pln">global</span><span class="pun">.</span><span class="pln">ssl</span><span class="pun">.</span><span class="pln">fastly</span><span class="pun">.</span><span class="pln">net 
+</span><span class="lit">192.30</span><span class="pun">.</span><span class="lit">253.113</span><span class="pln"> github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">103.245</span><span class="pun">.</span><span class="lit">222.133</span><span class="pln"> assets</span><span class="pun">-</span><span class="pln">cdn</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">23.235</span><span class="pun">.</span><span class="lit">47.133</span><span class="pln"> assets</span><span class="pun">-</span><span class="pln">cdn</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">203.208</span><span class="pun">.</span><span class="lit">39.104</span><span class="pln"> assets</span><span class="pun">-</span><span class="pln">cdn</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">204.232</span><span class="pun">.</span><span class="lit">175.78</span><span class="pln"> documentcloud</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">204.232</span><span class="pun">.</span><span class="lit">175.94</span><span class="pln"> gist</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">107.21</span><span class="pun">.</span><span class="lit">116.220</span><span class="pln"> help</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">207.97</span><span class="pun">.</span><span class="lit">227.252</span><span class="pln"> nodeload</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">199.27</span><span class="pun">.</span><span class="lit">76.130</span><span class="pln"> raw</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">107.22</span><span class="pun">.</span><span class="lit">3.110</span><span class="pln"> status</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">204.232</span><span class="pun">.</span><span class="lit">175.78</span><span class="pln"> training</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">207.97</span><span class="pun">.</span><span class="lit">227.243</span><span class="pln"> www</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">185.31</span><span class="pun">.</span><span class="lit">16.184</span><span class="pln"> github</span><span class="pun">.</span><span class="pln">global</span><span class="pun">.</span><span class="pln">ssl</span><span class="pun">.</span><span class="pln">fastly</span><span class="pun">.</span><span class="pln">net 
+</span><span class="lit">185.31</span><span class="pun">.</span><span class="lit">18.133</span><span class="pln"> avatars0</span><span class="pun">.</span><span class="pln">githubusercontent</span><span class="pun">.</span><span class="pln">com 
+</span><span class="lit">185.31</span><span class="pun">.</span><span class="lit">19.133</span><span class="pln"> avatars1</span><span class="pun">.</span><span class="pln">githubusercontent</span><span class="pun">.</span><span class="pln">com
+</span><span class="lit">192.30</span><span class="pun">.</span><span class="lit">253.120</span><span class="pln"> codeload</span><span class="pun">.</span><span class="pln">github</span><span class="pun">.</span><span class="pln">com</span></code></pre>
+<p>windows下刷新DNS的方法：</p>
+<p>打开cmd</p>
+<p>输入<code>ipconfig /flushdns</code></p>
+<p>亲测有用，下载速度明显提升<br> ————————————————<br> 以上。</p>
+
+
+
+<div class="post_title"> 
+<ins class="adsbygoogle" style="display: block; text-align: center; height: 182px;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6297881353008806" data-ad-slot="7083179606" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:182px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_2_anchor" style="display:block;border:none;height:182px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:728px;height:182px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="728" height="182" frameborder="0" src="./GitHub无法登陆或响应时间过长的解决方法_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-google-query-id="CIXJsYGCq_ICFUOJwgodieYKXw" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+<p><strong>标签：</strong><a href="https://www.icode9.com/tags-GitHub-0.html" target="_blank">GitHub</a>,<a href="https://www.icode9.com/tags-%E8%BF%87%E9%95%BF-0.html" target="_blank">过长</a>,<a href="https://www.icode9.com/tags-CDN-0.html" target="_blank">CDN</a>,<a href="https://www.icode9.com/tags-github-0.html" target="_blank">github</a>,<a href="https://www.icode9.com/tags-204.232-0.html" target="_blank">204.232</a>,<a href="https://www.icode9.com/tags-net-0.html" target="_blank">net</a>,<a href="https://www.icode9.com/tags-%E8%BD%AC%E8%BD%BD-0.html" target="_blank">转载</a>,<a href="https://www.icode9.com/tags-com-0.html" target="_blank">com</a>,<a href="https://www.icode9.com/tags-cdn-0.html" target="_blank">cdn</a>	<br>
+来源： https://blog.csdn.net/tuzi007a/article/details/115055798
+</p>
+	</div>
+     <div class="con-recom adblock">
+      <div class="bx-recom4">
+      </div>
+      <div class="bx-recom4">
+      </div>
+     </div>
+     </div>
+    <div class="sidebar" style="height: auto !important;">
+     <ul style="height: auto !important;">
+      <li class="sb_list">
+       <div class="bx">
+<!-- 123 -->
+<ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-6297881353008806" data-ad-slot="1061832590" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_3_anchor" style="display: block; border: none; height: 600px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 300px; background-color: transparent; overflow: visible;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" src="./GitHub无法登陆或响应时间过长的解决方法_files/ads(2).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!4" data-google-query-id="CLSCsoGCq_ICFQYPKgodsm8FVg" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></li>
+      <li class="sb_list"> </li>
+      <li class="sb_list">
+       <div class="bx"><div class="sidebar1">
+<!-- 456 -->
+<ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-6297881353008806" data-ad-slot="4979120200" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_4_anchor" style="display: block; border: none; height: 600px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 300px; background-color: transparent; overflow: visible;"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" src="./GitHub无法登陆或响应时间过长的解决方法_files/ads(3).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!5" data-google-query-id="CObcsYGCq_ICFVQSKgodGawEqw" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div></li>
+      <li class="sb_list">
+       <div class="bx">
+ <script src="./GitHub无法登陆或响应时间过长的解决方法_files/mid.js.下载"></script>
+       </div></li>
+     </ul>
+     <ul id="crf1">
+      <li class="sb_list">
+       <div class="bx">
+       </div></li>
+      <li class="sb_list">
+       <div class="bx">
+       </div></li>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div id="ft">
+     <div class="if">
+    <div class="bx1">
+     <a href="https://www.icode9.com/about.html" target="_blank"><strong>关于我们</strong></a>
+     <span class="v">|</span>
+     <a href="https://www.icode9.com/contactus.html" target="_blank"><strong>联系我们</strong></a>
+     <span class="v">|</span>
+     <a href="https://www.icode9.com/" target="_blank"><strong>留言反馈</strong></a>
+    </div>
+    <div class="bx2">
+     <p>专注分享技术，共同学习，共同进步。侵权联系[admin#icode9.com]</p>
+     <p>Copyright (C)<a href="https://www.icode9.com/" target="_blank">ICode9.com</a>, All Rights Reserved.</p>
+     <p><a href="https://www.icode9.com/" target="_blank">ICode9</a>版权所有</p>
+    </div>
+   </div>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?55fe9c2619b337dd6c48f295325d1425";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  </div>
+  <div style="display:none">
+  </div>
+<script src="./GitHub无法登陆或响应时间过长的解决方法_files/xiong.js.下载"></script>
+ 
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./GitHub无法登陆或响应时间过长的解决方法_files/ads(4).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins><iframe id="google_osd_static_frame_5840503576657" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./GitHub无法登陆或响应时间过长的解决方法_files/saved_resource(3).html"></iframe><iframe src="./GitHub无法登陆或响应时间过长的解决方法_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./GitHub无法登陆或响应时间过长的解决方法_files/zrt_lookup.html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background-color: transparent;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><ins id="aswift_5_expand" style="display: inline-table !important; border: none !important; height: 100vh !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; width: 100vw !important; background-color: transparent !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_5_anchor" style="display: block !important; border: none !important; height: 100vh !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; width: 100vw !important; background-color: transparent !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_5" name="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" src="./GitHub无法登陆或响应时间过长的解决方法_files/zrt_lookup(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" data-google-container-id="a!6" data-google-query-id="CPfGr4GCq_ICFZyFrAIdCgMEmg" data-load-complete="true"></iframe></ins></ins></ins></html>
