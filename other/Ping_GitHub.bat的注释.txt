@@ -3,7 +3,7 @@ github.com是原网址
 "C:\Windows\System32\drivers\etc\hosts"
 如果ping给出的ip加到hosts中后仍很慢，可以在 https://tool.chinaz.com/dns/?type=1&host=github.com&ip= 找ttl值最小的ip加入hosts
 
-格式：(查询到的ip) github.com
+格式："(查询到的ip) github.com"
 
 注意：ip和网址中间有个空格！
 
