@@ -1,13 +1,14 @@
 /*
-P1601 A+B Problem（高精）
+P1303 A*B Problem
 注释的代码是调试时写的，没删
+暂未完成！！！
 */
 #include <cstdio>
 
 //a:数字a,b:数字b,c:数字c,n:答案长度
-short a[500],b[500],c[500],n;
+short a[2000],b[2000],c[2000],n;
 //ac:数字a的输入,bb:数字b的输入
-char ac[510],bc[510];
+char ac[2000],bc[2000];
 //la:数字a的长度,lb,数字b的长度
 int la,lb;
 
@@ -29,35 +30,25 @@ void ch_to_short(){
     for(int i=la-1;i>=0;i--) a[i]=ac[abs(i-la)-1]-'0';
     for(int i=lb-1;i>=0;i--) b[i]=bc[abs(i-lb)-1]-'0';
 }
-//add:高精度加法函数
+//add:高精度乘法函数
 void add(){
     ch_to_short();
-    short t;
-    /*
-    printf("a[i]\tb[i]\tt\n");
-    */
-    for(int i=0;i<max(la,lb);i++){
-        int d;
-        if(i<la&&i<lb){
-            d=a[i]+b[i]+t;
+    short t,d;
+    int e;
+    for(int i=0;i<lb;i++){
+        for(int j=0;j<la;j++){
+            d=a[j]*b[i]+t;
             t=d/10;
+            c[j+e]+=d%10;
+            if(j+e>n) n++;
         }
-        else if(i<la){
-            d=a[i]+t;
-            t=d/10;
+        if(t){
+            c[n]+=t;
+            n++;
         }
-        else if(i<lb){
-            d=b[i]+t;
-            t=d/10;
-        }
-        c[i]=d%10;
-        n++;
-        /*
-        printf("%hd\t%hd\t%hd\n",a[i],b[i],t);
-        */
+        e++;
+        t=0;
     }
-    //记得把最高位的进位也加上
-    if(t) c[n++]=t;
 }
 int main(){
     scanf("%s%s",ac,bc);
