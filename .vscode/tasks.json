@@ -8,7 +8,10 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-O1",
+                "-O2",
+                "-O3"
             ],
             "options": {
                 "cwd": "G:\\Program Files\\vs\\mingw64\\bin"
