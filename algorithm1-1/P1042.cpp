@@ -2,8 +2,8 @@
    P1042 [NOIP2003 ÆÕ¼°×é] Æ¹ÅÒÇò
  * @Author: ÎÚ²«Ô³
  * @Date: 2021-08-12 15:46:44
- * @LastEditTime: 2021-08-13 17:20:56
- * @state: Accepted
+ * @LastEditTime: 2021-08-13 17:28:40
+ * @state: AC
  * @FilePath: \code_for_luogu\algorithm1-1\P1042.cpp
  */
 #include <cstdio>

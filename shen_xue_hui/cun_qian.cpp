@@ -2,8 +2,8 @@
    ´æÇ®
  * @Author: ÎÚ²«Ô³
  * @Date: 2021-08-12 21:05:41
- * @LastEditTime: 2021-08-13 17:23:36
- * @state: Writing
+ * @LastEditTime: 2021-08-13 17:27:58
+ * @state: Other
  * @FilePath: \code_for_luogu\shen_xue_hui\cun_qian.cpp
  */
 #include <cstdio>

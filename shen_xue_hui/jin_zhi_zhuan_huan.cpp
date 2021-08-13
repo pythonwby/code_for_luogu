@@ -2,8 +2,8 @@
    ½øÖÆ×ª»»
  * @Author: ÎÚ²«Ô³
  * @Date: 2021-08-12 21:27:44
- * @LastEditTime: 2021-08-13 17:23:42
- * @state: Writing
+ * @LastEditTime: 2021-08-13 17:28:06
+ * @state: Other
  * @FilePath: \code_for_luogu\shen_xue_hui\jin_zhi_zhuan_huan.cpp
  */
 /********************************

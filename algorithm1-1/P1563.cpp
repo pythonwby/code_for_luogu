@@ -2,8 +2,8 @@
    P1563 [NOIP2016 提高组] 玩具谜题
  * @Author: 乌搏猿
  * @Date: 2021-08-13 09:09:54
- * @LastEditTime: 2021-08-13 17:20:30
- * @state: Accepted
+ * @LastEditTime: 2021-08-13 17:28:35
+ * @state: AC
  * @FilePath: \code_for_luogu\algorithm1-1\P1563.cpp
  */
 //注释的代码是调试时写的，没删
