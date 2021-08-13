@@ -37,5 +37,5 @@ int main(){
     }
     cout<<b[now]<<endl;
     system("pause");
-    return 0;;
+    return 0;
 }
