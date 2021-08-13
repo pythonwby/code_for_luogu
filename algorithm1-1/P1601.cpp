@@ -2,7 +2,7 @@
    P1303 A*B Problem
  * @Author: 乌搏猿
  * @Date: 2021-08-12 16:44:53
- * @LastEditTime: 2021-08-13 17:28:30
+ * @LastEditTime: 2021-08-13 17:50:01
  * @state: Other
  * @FilePath: \code_for_luogu\algorithm1-1\P1601.cpp
  */
@@ -11,9 +11,9 @@
 #include <cstdio>
 
 //a:数字a,b:数字b,c:数字c,n:答案长度
-short a[2000],b[2000],c[2000],n;
+short a[2010],b[2010],c[2010],n;
 //ac:数字a的输入,bb:数字b的输入
-char ac[2000],bc[2000];
+char ac[2010],bc[2010];
 //la:数字a的长度,lb,数字b的长度
 int la,lb;
 
@@ -38,27 +38,20 @@ void ch_to_short(){
 //add:高精度乘法函数
 void add(){
     ch_to_short();
-    short t,d;
-    int e;
     for(int i=0;i<lb;i++){
         for(int j=0;j<la;j++){
-            d=a[j]*b[i]+t;
-            t=d/10;
-            c[j+e]+=d%10;
-            if(j+e>n) n++;
+            c[i+j-1]+=a[i]*b[j];
         }
-        if(t){
-            c[n]+=t;
-            n++;
-        }
-        e++;
-        t=0;
     }
+    n=la+lb;
 }
-int main_1601(){
+int main(){
     scanf("%s%s",ac,bc);
     add();
+    //去前导零;
+    while(c[n]==0)n--;
     //输出要倒序
+    printf("%hd\n",c[0]);
     for(short i=n-1;i>=0;i--){
         printf("%hd",c[i]);
     }
