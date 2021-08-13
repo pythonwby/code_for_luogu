@@ -1,3 +1,10 @@
+/* 
+   进制转换
+ * @Author: 乌搏猿
+ * @Date: 2021-08-12 21:27:44
+ * @LastEditTime: 2021-08-13 17:02:19
+ * @FilePath: \code_for_luogu\shen_xue_hui\jin_zhi_zhuan_huan.cpp
+ */
 /********************************
             未完成！！！
 ********************************/
@@ -10,7 +17,7 @@ char output[30];
 string input;
 int x,y,num;
 
-int main(){
+int main_jin_zhi_zhuan_huan(){
     scanf("%d",&x);
     cin>>input;
     scanf("%d",&y);

@@ -1,3 +1,10 @@
+/* 
+   存钱
+ * @Author: 乌搏猿
+ * @Date: 2021-08-12 21:05:41
+ * @LastEditTime: 2021-08-13 17:02:35
+ * @FilePath: \code_for_luogu\shen_xue_hui\cun_qian.cpp
+ */
 #include <cstdio>
 
 //ys:每月预算,cq:存的钱,sy:每月剩余
@@ -5,7 +12,7 @@ int ys[12],cq,sy;
 //钱是否不够
 bool flag=false;
 
-int main(){
+int main_cun_qian(){
     for(int i=0;i<12;i++){
         scanf("%d",&ys[i]);
     }
