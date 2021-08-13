@@ -2,7 +2,7 @@
    P1563 [NOIP2016 提高组] 玩具谜题
  * @Author: 乌搏猿
  * @Date: 2021-08-13 09:09:54
- * @LastEditTime: 2021-08-13 16:24:13
+ * @LastEditTime: 2021-08-13 16:48:08
  * @FilePath: \code_for_luogu\algorithm1-1\P1563.cpp
  */
 //暂未完成！！！
@@ -32,12 +32,14 @@ int main(){
         b.push_back(tempstr);
     }
     //读入指令并执行
+    printf("logs:\nx\ty\ta[n]\tb[n]\tn\n");
     while(m--){
         scanf("%d%d",&x,&y);
-        if(a[now]==true&&x==0) now=(now+n-y)%n;
-        else if(a[now]==true&&x==1) now=(now+y)%n;
-        else if(a[now]==false&&x==0) now=(now+y)%n;
-        else if(a[now]==true&&x==1) now=(now+n-y)%n;
+        printf("%d\t%d\t%d\t%s\t%d\n",x,y,int(a[now]),b[now],now);
+        //if(a[now]==true&&x==0) now=(now+n-y)%n;
+        //else if(a[now]==true&&x==1) now=(now+y)%n;
+        //else if(a[now]==false&&x==0) now=(now+y)%n;
+        //else if(a[now]==true&&x==1) now=(now+n-y)%n;
     }
     cout<<b[now]<<endl;
     system("pause");
