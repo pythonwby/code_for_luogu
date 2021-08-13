@@ -1,7 +1,11 @@
-/*******************************
-P1563	[NOIP2016 提高组] 玩具谜题
-暂未完成！！！
-********************************/
+/* 
+   P1563 [NOIP2016 提高组] 玩具谜题
+ * @Author: 乌搏猿
+ * @Date: 2021-08-13 09:09:54
+ * @LastEditTime: 2021-08-13 16:24:13
+ * @FilePath: \code_for_luogu\algorithm1-1\P1563.cpp
+ */
+//暂未完成！！！
 #include <iostream>
 #include <string>
 #include <vector>

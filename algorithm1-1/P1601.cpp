@@ -1,8 +1,12 @@
-/*
-P1303 A*B Problem
-注释的代码是调试时写的，没删
-暂未完成！！！
-*/
+/* 
+   P1303 A*B Problem
+ * @Author: 乌搏猿
+ * @Date: 2021-08-12 16:44:53
+ * @LastEditTime: 2021-08-13 16:23:20
+ * @FilePath: \code_for_luogu\algorithm1-1\P1601.cpp
+ */
+//注释的代码是调试时写的，没删
+//暂未完成！！！
 #include <cstdio>
 
 //a:数字a,b:数字b,c:数字c,n:答案长度
