@@ -2,10 +2,11 @@
    P1563 [NOIP2016 提高组] 玩具谜题
  * @Author: 乌搏猿
  * @Date: 2021-08-13 09:09:54
- * @LastEditTime: 2021-08-13 16:48:08
+ * @LastEditTime: 2021-08-13 17:20:30
+ * @state: Accepted
  * @FilePath: \code_for_luogu\algorithm1-1\P1563.cpp
  */
-//暂未完成！！！
+//注释的代码是调试时写的，没删
 #include <iostream>
 #include <string>
 #include <vector>
@@ -22,7 +23,7 @@ string tempstr;
 //tempint:临时数字变量
 int tempint;
 
-int main(){
+int main_1563(){
     scanf("%d%d",&n,&m);
     //存小人信息
     for(int i=0;i<n;i++){
@@ -32,14 +33,18 @@ int main(){
         b.push_back(tempstr);
     }
     //读入指令并执行
-    printf("logs:\nx\ty\ta[n]\tb[n]\tn\n");
+    /*
+    printf("debug:\nx   y   a[n] n\n");
+    */
     while(m--){
         scanf("%d%d",&x,&y);
-        printf("%d\t%d\t%d\t%s\t%d\n",x,y,int(a[now]),b[now],now);
-        //if(a[now]==true&&x==0) now=(now+n-y)%n;
-        //else if(a[now]==true&&x==1) now=(now+y)%n;
-        //else if(a[now]==false&&x==0) now=(now+y)%n;
-        //else if(a[now]==true&&x==1) now=(now+n-y)%n;
+        /*
+        printf("%d   %d   %d    %d\n",x,y,int(a[now]),now);
+        */
+        if(a[now]==true&&x==0) now=(now+n-y)%n;
+        else if(a[now]==true&&x==1) now=(now+y)%n;
+        else if(a[now]==false&&x==0) now=(now+y)%n;
+        else if(a[now]==false&&x==1) now=(now+n-y)%n;
     }
     cout<<b[now]<<endl;
     system("pause");

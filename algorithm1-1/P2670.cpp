@@ -2,7 +2,8 @@
    P2670 [NOIP2015 普及组] 扫雷游戏
  * @Author: 乌搏猿
  * @Date: 2021-08-12 15:48:29
- * @LastEditTime: 2021-08-13 16:57:51
+ * @LastEditTime: 2021-08-13 17:23:03
+ * @state: Accepted
  * @FilePath: \code_for_luogu\algorithm1-1\P2670.cpp
  */
 //注释的代码是调试时写的，没删
