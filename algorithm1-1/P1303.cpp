@@ -2,8 +2,8 @@
    P1303 A*B Problem
  * @Author: ÎÚ²«Ô³
  * @Date: 2021-08-12 16:44:53
- * @LastEditTime: 2021-08-14 10:58:05
- * @state: Other
+ * @LastEditTime: 2021-08-14 11:00:09
+ * @state: AC
  * @FilePath: \code_for_luogu\algorithm1-1\P1303.cpp
  */
 #include <cstdio>
@@ -47,7 +47,7 @@ void add(){
         c[i]%=10;
     }
 }
-int main(){
+int main_1303(){
     scanf("%s%s",ac,bc);
     add();
     //È¥Ç°µ¼Áã;
