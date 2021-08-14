@@ -2,7 +2,7 @@
    P1303 A*B Problem
  * @Author: 乌搏猿
  * @Date: 2021-08-12 16:44:53
- * @LastEditTime: 2021-08-14 10:43:32
+ * @LastEditTime: 2021-08-14 10:58:05
  * @state: Other
  * @FilePath: \code_for_luogu\algorithm1-1\P1303.cpp
  */
@@ -51,7 +51,7 @@ int main(){
     scanf("%s%s",ac,bc);
     add();
     //去前导零;
-    while(c[n]==0)n--;
+    while(c[n]==0&&n>=1)n--;
     //输出要倒序
     for(int i=n;i>=0;i--){
         printf("%d",c[i]);
