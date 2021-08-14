@@ -2,11 +2,10 @@
    P1303 A*B Problem
  * @Author: 乌搏猿
  * @Date: 2021-08-12 16:44:53
- * @LastEditTime: 2021-08-14 10:40:14
+ * @LastEditTime: 2021-08-14 10:43:32
  * @state: Other
  * @FilePath: \code_for_luogu\algorithm1-1\P1303.cpp
  */
-//暂未完成！！！
 #include <cstdio>
 
 //a:数字a,b:数字b,c:数字c,n:答案长度
