@@ -2,7 +2,7 @@
    P1177 [Ä£°å] ¿ìËÙÅÅÐò
  * @Author: ÎÚ²«Ô³
  * @Date: 2021-08-14 16:47:41
- * @LastEditTime: 2021-08-14 18:14:58
+ * @LastEditTime: 2021-08-14 18:20:23
  * @state: AC
  * @FilePath: \code_for_luogu\algorithm1-2\P1177.cpp
  */
@@ -28,7 +28,7 @@ void sort(int l,int r){
     if(l<j) sort(l,j);
     if(i<r) sort(i,r);
 }
-int main(){
+int main_1177(){
     scanf("%d",&n);
     for(i=0;i<n;i++) scanf("%d",&a[i]);
     sort(0,n-1);
