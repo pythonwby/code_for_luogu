@@ -2,7 +2,7 @@
    P2241 统计方形（数据加强版）
  * @Autor: 乌搏猿
  * @Date: 2021-08-15 15:29:58
- * @LastEditTime: 2021-08-15 16:32:38
+ * @LastEditTime: 2021-08-15 16:32:56
  * @state: Other
  * @FilePath: \code_for_luogu\algorithm1-3\P2241.cpp
  */
