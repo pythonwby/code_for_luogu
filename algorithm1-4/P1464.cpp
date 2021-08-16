@@ -2,7 +2,7 @@
    P1464 Function
  * @Autor: ÎÚ²«Ô³
  * @Date: 2021-08-16 12:48:03
- * @LastEditTime: 2021-08-16 16:36:21
+ * @LastEditTime: 2021-08-16 17:02:20
  * @state: Other
  * @FilePath: \code_for_luogu\algorithm1-4\P1464.cpp
  */
@@ -24,6 +24,7 @@ int main(){
         ll d=w(a,b,c);
         printf("w(%d, %d, %d) = %d",a,b,c,d);
     }
+    
     system("pause");
     return 0;
 }
