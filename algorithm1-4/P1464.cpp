@@ -2,7 +2,7 @@
    P1464 Function
  * @Autor: 乌搏猿
  * @Date: 2021-08-16 12:48:03
- * @LastEditTime: 2021-08-17 12:07:19
+ * @LastEditTime: 2021-08-17 13:55:20
  * @state: Other
  * @FilePath: \code_for_luogu\algorithm1-4\P1464.cpp
  */
@@ -10,9 +10,10 @@
 #include <cstdio>
 #define ll long long
 
-//sum:debug val
+//sum:调试变量
 int sum;
 
+//w:题目中指定的函数
 ll w(ll a,ll b,ll c){
     sum++;
     printf("%d\n",sum);

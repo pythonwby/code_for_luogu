@@ -1,13 +1,14 @@
 /*
-   P2249 (深基13.例1) 查找
+   P2249 [深基13.例1] 查找
  * @Autor: 乌搏猿
  * @Date: 2021-08-17 13:13:39
- * @LastEditTime: 2021-08-17 13:43:53
+ * @LastEditTime: 2021-08-17 13:56:01
  * @state: AC
  * @FilePath: \code_for_luogu\algorithm1-6\P2249.cpp
  */
 #include <cstdio>
 
+//a:输入的数组,n:数组长度,m:询问次数
 int a[1000010],n,m;
 
 int find(int x){
