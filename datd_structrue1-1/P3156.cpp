@@ -2,12 +2,13 @@
    P3156 [深基15.例1] 询问学号
  * @Autor: 乌搏猿
  * @Date: 2021-08-18 14:59:34
- * @LastEditTime: 2021-08-18 15:06:12
+ * @LastEditTime: 2021-08-18 15:22:43
  * @state: AC
  * @FilePath: \code_for_luogu\datd_structrue1-1\P3156.cpp
  */
 #include <cstdio>
 
+//a:存放学号的数组
 int n,m,a[2000010];
 
 int main(){
