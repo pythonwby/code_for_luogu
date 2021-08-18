@@ -2,7 +2,7 @@
    P1873 ¿³Ê÷
  * @Autor: ÎÚ²«Ô³
  * @Date: 2021-08-17 14:09:25
- * @LastEditTime: 2021-08-17 19:04:42
+ * @LastEditTime: 2021-08-18 14:55:55
  * @state: AC
  * @FilePath: \code_for_luogu\algorithm1-6\P1873.cpp
  */
@@ -19,7 +19,7 @@ bool f(ll x){
     }
     return sum>=m;
 }
-int main(){
+int main_1873(){
     scanf("%lld%lld",&n,&m);
     for(ll i=0;i<n;i++) scanf("%lld",&a[i]);
     ll l=0,r=1000000,mid,ans;
