@@ -2,7 +2,7 @@
    P1303 A*B Problem
  * @Author: ÎÚ²«Ô³
  * @Date: 2021-08-12 16:44:53
- * @LastEditTime: 2021-08-14 11:00:09
+ * @LastEditTime: 2021-08-19 13:05:13
  * @state: AC
  * @FilePath: \code_for_luogu\algorithm1-1\P1303.cpp
  */
