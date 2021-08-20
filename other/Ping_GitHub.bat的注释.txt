@@ -8,5 +8,5 @@ github.com是原网址
 注意：ip和网址中间有个空格！
 
 hosts修改好后cmd执行dns刷新命令：
-ipconfig /flusdns
+ipconfig /flushdns
 如果html文件有问题，可以去 https://www.freesion.com/article/65861008617/
