@@ -2,11 +2,10 @@
    P5015 [NOIP2018 普及组] 标题统计
  * @Autor: 乌搏猿
  * @Date: 2021-08-21 14:04:01
- * @LastEditTime: 2021-08-21 14:41:05
- * @state: Other
+ * @LastEditTime: 2021-08-21 15:25:33
+ * @state: AC
  * @FilePath: \code_for_luogu\uncatelogued\P5015.cpp
  */
-//暂未完成！！！
 #include <iostream>
 using namespace std;
 
