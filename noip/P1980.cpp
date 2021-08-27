@@ -2,7 +2,7 @@
    P1980 [NOIP2013 普及组] 计数问题
  * @Autor: 乌搏猿
  * @Date: 2021-08-27 17:10:28
- * @LastEditTime: 2021-08-27 17:24:13
+ * @LastEditTime: 2021-08-27 18:29:37
  * @state: AC
  * @FilePath: \code_for_luogu\noip\P1980.cpp
  */
@@ -21,5 +21,6 @@ int main_1980(){
         }
     }
     printf("%d\n",ans);
+    system("pause");
     return 0;
 }

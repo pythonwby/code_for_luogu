@@ -2,7 +2,7 @@
    P1909 [NOIP2016 ÆÕ¼°×é] ÂòÇ¦±Ê
  * @Autor: ÎÚ²«Ô³
  * @Date: 2021-08-27 17:16:10
- * @LastEditTime: 2021-08-27 17:24:39
+ * @LastEditTime: 2021-08-27 18:29:33
  * @state: AC
  * @FilePath: \code_for_luogu\noip\P1909.cpp
  */
@@ -19,5 +19,6 @@ int main_1909(){
     ans=min(ans,b2*int(ceil(1.0*n/b1)));
     ans=min(ans,c2*int(ceil(1.0*n/c1)));
     printf("%d\n",ans);
+    system("pause");
     return 0;
 }
