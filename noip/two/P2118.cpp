@@ -16,6 +16,7 @@ int a,b,c;
 int main(){
     scanf("%d%d%d",&a,&b,&c);
     printf("%d %d\n",a/__gcd(a,b),b/__gcd(a,b));
+    
     system("pause");
     return 0;
 }
