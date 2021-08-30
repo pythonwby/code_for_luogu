@@ -2,12 +2,13 @@
    P2010 [NOIP2016 普及组] 回文日期
  * @Autor: 乌搏猿
  * @Date: 2021-08-30 17:33:31
- * @LastEditTime: 2021-08-30 18:09:53
+ * @LastEditTime: 2021-08-30 18:32:31
  * @state: AC
  * @FilePath: \code_for_luogu\noip\two\P2010.cpp
  */
 #include <cstdio>
 
+//a:每个月的天数
 int ans=0,sum,d1,d2,a[20]={-1,31,29,31,30,31,30,31,31,30,31,30,31};
 
 int main_2010(){
