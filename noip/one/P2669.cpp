@@ -2,9 +2,9 @@
    P2669 [NOIP2015 ÆÕ¼°×é] ½ð±Ò
  * @Autor: ÎÚ²«Ô³
  * @Date: 2021-08-27 17:14:12
- * @LastEditTime: 2021-08-27 18:29:43
+ * @LastEditTime: 2021-08-31 17:43:48
  * @state: AC
- * @FilePath: \code_for_luogu\noip\P2669.cpp
+ * @FilePath: \code_for_luogu\noip\one\P2669.cpp
  */
 #include <cstdio>
 

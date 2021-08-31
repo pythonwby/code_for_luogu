@@ -2,9 +2,9 @@
    P1307 [NOIP2011 普及组] 数字反转
  * @Autor: 乌搏猿
  * @Date: 2021-08-27 17:06:20
- * @LastEditTime: 2021-08-27 18:29:27
+ * @LastEditTime: 2021-08-31 17:43:29
  * @state: AC
- * @FilePath: \code_for_luogu\noip\P1307.cpp
+ * @FilePath: \code_for_luogu\noip\one\P1307.cpp
  */
 #include <cstdio>
 

@@ -2,9 +2,9 @@
    P2141 [NOIP2014 普及组] 珠心算测验
  * @Autor: 乌搏猿
  * @Date: 2021-08-27 17:11:55
- * @LastEditTime: 2021-08-27 18:29:40
+ * @LastEditTime: 2021-08-31 17:43:43
  * @state: AC
- * @FilePath: \code_for_luogu\noip\P2141.cpp
+ * @FilePath: \code_for_luogu\noip\one\P2141.cpp
  */
 #include <cstdio>
 

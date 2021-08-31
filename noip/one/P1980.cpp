@@ -2,9 +2,9 @@
    P1980 [NOIP2013 普及组] 计数问题
  * @Autor: 乌搏猿
  * @Date: 2021-08-27 17:10:28
- * @LastEditTime: 2021-08-27 18:29:37
+ * @LastEditTime: 2021-08-31 17:43:38
  * @state: AC
- * @FilePath: \code_for_luogu\noip\P1980.cpp
+ * @FilePath: \code_for_luogu\noip\one\P1980.cpp
  */
 #include <cstdio>
 
