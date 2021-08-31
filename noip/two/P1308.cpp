@@ -2,7 +2,7 @@
    P1308 [NOIP2011 普及组] 统计单词数
  * @Autor: 乌搏猿
  * @Date: 2021-08-31 15:22:58
- * @LastEditTime: 2021-08-31 16:01:27
+ * @LastEditTime: 2021-08-31 17:41:29
  * @state: AC
  * @FilePath: \code_for_luogu\noip\two\P1308.cpp
  */
@@ -16,7 +16,7 @@ int la,lb;
 //f:第一次出现的位置
 int ans,f=-1;
 
-int main(){
+int main_1308(){
     getline(cin,a);
     getline(cin,b);
     la=a.length();
