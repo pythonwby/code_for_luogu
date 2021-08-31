@@ -2,7 +2,7 @@
    P1190 [NOIP2010 普及组] 接水问题
  * @Autor: 乌搏猿
  * @Date: 2021-08-31 16:17:41
- * @LastEditTime: 2021-08-31 17:40:12
+ * @LastEditTime: 2021-08-31 18:39:41
  * @state: AC
  * @FilePath: \code_for_luogu\noip\two\P1190.cpp
  */
