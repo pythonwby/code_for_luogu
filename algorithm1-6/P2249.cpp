@@ -2,7 +2,7 @@
    P2249 [Éî»ù13.Àý1] ²éÕÒ
  * @Autor: ÎÚ²«Ô³
  * @Date: 2021-08-17 13:13:39
- * @LastEditTime: 2021-08-17 13:56:01
+ * @LastEditTime: 2021-09-24 21:58:24
  * @state: AC
  * @FilePath: \code_for_luogu\algorithm1-6\P2249.cpp
  */
@@ -21,7 +21,7 @@ int find(int x){
     if(a[l]==x) return l+1;
     return -1;
 }
-int main(){
+int main_2249(){
     scanf("%d%d",&n,&m);
     for(int i=0;i<n;i++) scanf("%d",&a[i]);
     for(int i=0;i<m;i++){
