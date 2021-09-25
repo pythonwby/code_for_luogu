@@ -2,8 +2,8 @@
    P1008 [NOIP1998 普及组] 三连击
  * @Autor: 乌搏猿
  * @Date: 2021-09-25 13:44:11
- * @LastEditTime: 2021-09-25 14:04:56
- * @state: Other
+ * @LastEditTime: 2021-09-25 14:30:04
+ * @state: AC
  * @FilePath: \code_for_luogu\luogu\P1008.cpp
  */
 #include <cstdio>
