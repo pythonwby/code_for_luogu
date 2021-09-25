@@ -2,12 +2,13 @@
    P1035 [NOIP2002 普及组] 级数求和
  * @Autor: 乌搏猿
  * @Date: 2021-09-25 14:23:43
- * @LastEditTime: 2021-09-25 14:29:12
+ * @LastEditTime: 2021-09-25 14:45:25
  * @state: AC
  * @FilePath: \code_for_luogu\luogu\P1035.cpp
  */
 #include <cstdio>
 
+//n,k与题目中的意思相同
 int n=1,k;
 
 int main_1035(){
