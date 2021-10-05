@@ -1,6 +1,27 @@
 {
     "files.associations": {
         "cstdlib": "cpp",
-        "cstdio": "cpp"
+        "cstdio": "cpp",
+        "cstring": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "complex": "cpp",
+        "string": "cpp",
+        "iterator": "cpp",
+        "string_view": "cpp",
+        "random": "cpp",
+        "fstream": "cpp",
+        "iomanip": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "sstream": "cpp",
+        "streambuf": "cpp",
+        "system_error": "cpp",
+        "thread": "cpp",
+        "regex": "cpp",
+        "stdexcept": "cpp",
+        "typeinfo": "cpp",
+        "iostream": "cpp"
     }
 }
