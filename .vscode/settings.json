@@ -22,6 +22,8 @@
         "regex": "cpp",
         "stdexcept": "cpp",
         "typeinfo": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "shared_mutex": "cpp",
+        "functional": "cpp"
     }
 }
