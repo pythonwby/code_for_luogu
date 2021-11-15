@@ -2,8 +2,8 @@
    1054£ºÈý½ÇÐÎÅÐ¶Ï
  * @Autor: ÎÚ²«Ô³
  * @Date: 2021-11-14 14:59:19
- * @LastEditTime: 2021-11-14 15:00:28
- * @state: Other
+ * @LastEditTime: 2021-11-15 20:23:08
+ * @state: AC
  * @FilePath: \code_for_luogu\ybt\1054.cpp
  */
 #include <cstdio>
