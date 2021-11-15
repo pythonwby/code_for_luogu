@@ -2,8 +2,8 @@
    1053：最大数输出
  * @Autor: 乌搏猿
  * @Date: 2021-11-14 14:55:11
- * @LastEditTime: 2021-11-14 14:56:41
- * @state: Other
+ * @LastEditTime: 2021-11-15 20:21:23
+ * @state: AC
  * @FilePath: \code_for_luogu\ybt\1053.cpp
  */
 #include <cstdio>
