@@ -2,19 +2,19 @@
    1057£º¼òµ¥¼ÆËãÆ÷
  * @Autor: ÎÚ²«Ô³
  * @Date: 2021-11-14 15:18:11
- * @LastEditTime: 2021-11-14 15:18:11
- * @state: Other
- * @FilePath: \code_for_luogu\1057.cpp
+ * @LastEditTime: 2021-11-15 21:13:40
+ * @state: AC
+ * @FilePath: \code_for_luogu\ybt\1057.cpp
  */
 #include <cstdio>
 #include <iostream>
 using namespace std;
 
-double a,b;
+int a,b;
 char c;
 
 int main(){
-    scanf("%lf %lf %c",&a,&b,&c);
+    scanf("%d %d %c",&a,&b,&c);
     switch(c){
         case '+':
             cout<<a+b<<endl;

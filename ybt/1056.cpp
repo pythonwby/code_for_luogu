@@ -2,8 +2,8 @@
    1056：点和正方形的关系
  * @Autor: 乌搏猿
  * @Date: 2021-11-14 15:08:48
- * @LastEditTime: 2021-11-14 15:17:05
- * @state: Other
+ * @LastEditTime: 2021-11-15 21:09:20
+ * @state: AC
  * @FilePath: \code_for_luogu\ybt\1056.cpp
  */
 #include <cstdio>
