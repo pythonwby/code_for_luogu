@@ -71,5 +71,6 @@
         "scoped_allocator": "cpp",
         "typeindex": "cpp",
         "valarray": "cpp"
-    }
+    },
+    "editor.detectIndentation": false
 }
