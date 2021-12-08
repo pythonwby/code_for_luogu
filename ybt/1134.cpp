@@ -2,7 +2,7 @@
    1134：合法C标识符查
  * @Autor: 乌搏猿
  * @Date: 2021-12-08 20:09:41
- * @LastEditTime: 2021-12-08 20:21:16
+ * @LastEditTime: 2021-12-08 20:25:31
  * @state: AC
  * @FilePath: \code_for_luogu\ybt\1134.cpp
  */
