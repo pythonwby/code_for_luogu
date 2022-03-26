@@ -2,7 +2,7 @@
    P7471 [NOI Online 2021 ÈëÃÅ×é] ÇÐµ°¸â
  * @Autor: ÎÚ²«Ô³
  * @Date: 2022-03-26 10:44:20
- * @LastEditTime: 2022-03-26 10:51:49
+ * @LastEditTime: 2022-03-26 11:29:37
  * @state: Other
  * @FilePath: \code_for_luogu\luogu\P7471.cpp
  */
@@ -23,8 +23,34 @@ int main(){
         }
         if(a[0]==0&&a[1]==a[2]){
             printf("1\n");
+            continue;
         }
+        if(a[0]==a[1]){
+            printf("2\n");
+            continue;
+        }
+        if(a[1]==a[2]){
+            printf("2\n");
+            continue;
+        }
+        if(a[0]==0&&a[1]!=a[2]){
+            printf("2\n");
+            continue;
+        }
+        if(a[0]==a[1]&&a[2]==a[1]){
+            printf("2\n");
+            continue;
+        }
+        if(a[0]!=0&&a[0]==a[1]){
+            printf("2\n");
+            continue;
+        }
+        if(a[0]!=0&&a[0]+a[1]==a[2]){
+            printf("2\n");
+            continue;
+        }
+        printf("3\n");
     }
-    system("pause");
+    //system("pause");
     return 0;
 }
