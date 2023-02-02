@@ -2,7 +2,7 @@
    P1093 [NOIP2007 普及组] 奖学金
  * @Author: 乌搏猿
  * @Date: 2023-02-02 15:08:59
- * @LastEditTime: 2023-02-02 17:28:32
+ * @LastEditTime: 2023-02-02 17:54:26
  * @State: AC
  * @FilePath: \code_for_luogu\luogu\P1093.cpp
  * @提示: Crtl + Win + I 添加文件头
